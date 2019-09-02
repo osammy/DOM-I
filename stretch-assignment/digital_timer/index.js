@@ -1,5 +1,3 @@
-const digits = document.querySelector(".digits");
-
 function init() {
   const secondOnes = document.getElementById("secondOnes");
   const secondTens = document.getElementById("secondTens");
@@ -27,7 +25,9 @@ function startCounting() {
         if (Number(secondOnes.textContent) === 10) {
           secondTens.textContent = 1;
           secondOnes.textContent = 0;
-          digits.style.color = "red";
+          const digits = document.querySelectorAll(".digits .digit");
+          document.querySelector(".digits").classList.add("redDigit")
+          
           clearInterval(timerInterval);
         }
       }
@@ -36,4 +36,9 @@ function startCounting() {
 }
 
 init();
-startCounting();
+
+
+const startTimer = document.getElementById('startTimer');
+startTimer.addEventListener('click',function(){
+  startCounting();
+})

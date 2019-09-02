@@ -39,4 +39,118 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+/* sTART TASK 1 */
+let navAnchor = document.querySelectorAll('nav a');
+
+for(let i = 0 ; i < navAnchor.length ; i++) {
+  navAnchor[i].textContent = siteContent['nav'][`nav-item-${i +1}`]
+}
+//second 
+document
+.querySelector('.cta-text h1')
+.innerHTML = "DOM<br> Is<br> Awesome";
+
+
+
+//third
+document
+.querySelector('.cta-text button')
+.textContent = siteContent["cta"]["button"];
+
+//fourth
+document
+.getElementById('cta-img')
+.src = siteContent["cta"]["img-src"];
+
+//fifith
+
+const topContentH4s = document
+.querySelectorAll('.top-content .text-content h4');
+const topContentPs = document
+.querySelectorAll('.top-content .text-content p');
+topContentH4s[0].textContent = siteContent["main-content"]["features-h4"];
+topContentPs[0].textContent = siteContent["main-content"]["features-content"];
+topContentH4s[1].textContent = siteContent["main-content"]["about-h4"];
+topContentPs[1].textContent = siteContent["main-content"]["about-content"];
+
+
+
+
+// document
+// .querySelectorAll('.top-content .text-content p')[1]
+// .textContent = siteContent["main-content"]["features-content"]
+
+//sixth
+console.log(document
+.querySelectorAll('.bottom-content .text-content h4'))
+
+const bottomContentH4s = document
+.querySelectorAll('.bottom-content .text-content h4');
+
+const bottomContentPs = document
+.querySelectorAll('.bottom-content .text-content p');
+
+bottomContentH4s[0].textContent = siteContent["main-content"]["services-h4"];
+bottomContentPs[0].textContent = siteContent["main-content"]["services-content"];
+
+bottomContentH4s[1].textContent = siteContent["main-content"]["product-h4"];
+bottomContentPs[1].textContent = siteContent["main-content"]["product-content"];
+
+bottomContentH4s[2].textContent = siteContent["main-content"]["vision-h4"];
+bottomContentPs[2].textContent = siteContent["main-content"]["vision-content"];
+
+//contact us section
+document.getElementById('middle-img')
+.src = siteContent['main-content']['middle-img-src'];
+
+const theParentSection = document.querySelector('.contact');
+theParentSection.children[0].textContent = siteContent["contact"]["contact-h4"];
+theParentSection.children[1].textContent = siteContent["contact"]["address"];
+
+theParentSection.children[2].textContent = siteContent["contact"]["phone"];
+theParentSection.children[3].textContent = siteContent["contact"]["email"];
+
+//footer
+document
+.querySelector('footer p')
+.textContent = siteContent["footer"]["copyright"];
+
+/* END TASK 1 */
+
+
+
+
+/* START TASK 2 */
+
+
+//b
+const nav = document.querySelector('nav');
+const appendedAnchor = document.createElement('a');
+appendedAnchor.textContent = "Pricing";
+nav.appendChild(appendedAnchor);
+
+
+const prependedAnchor = document.createElement('a');
+prependedAnchor.textContent = "Home";
+nav.prepend(prependedAnchor)
+
+//changing na anchor to color green
+let updatedNavAnchor = document.querySelectorAll('nav a');
+updatedNavAnchor.forEach(a => {
+  a.style.color = "green";
+})
+
+/* END TASK 2 */
+
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,10 @@
-body {
+/*body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}*/
+
+.timer-digits {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,4 +17,19 @@ body {
 
 .redDigit {
   color: red;
+}
+.timerDiv {
+  text-align:center;
+  margin:20px 0;
+}
+#startTimer {
+  background:green;
+  padding:10px 40px;
+  border: 1px solid black;
+  color:white;
+}
+
+.timerDiv {
+  display:block;
+  
 }

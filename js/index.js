@@ -144,6 +144,15 @@ updatedNavAnchor.forEach(a => {
 
 /* END TASK 2 */
 
+/* Stretch Task */
+const btn = document
+.querySelector('.cta-text button');
+
+btn.addEventListener('click',function(e){
+  console.log(this)
+  this.textContent = "Clicked!";
+})
+
 
 
 
